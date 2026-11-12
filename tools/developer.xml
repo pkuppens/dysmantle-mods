@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+
+
+ <array id="PARAMETERS">
+
+  <!-- Developer parameters. Be sure to turn everything off or remove the whole block for the release builds. -->
+  <node id="DEVELOPER"
+   developer_mode="1"
+   developer_packages="data-src"
+   logging="0"
+   logging_verbose_level="INFO|WARNING|ERROR|SYSTEM"
+   console="1"
+   features="ALLOW_MULTIPLE_PROGRAM_INSTANCES,SHADEGROWN_DEVELOPMENT_ENVIRONMENT,MODS,STAGE_EDITOR,DISABLE_VSYNC"
+   _console_toggle_key="TAB"
+   _force_variant="IOS/SMALL"
+   _force_resolution="800x600"
+   _force_windowed="0"
+  />
+
+ </array>
+
+ <array id="SCREENSHOTS">
+  <node width="1920" height="1080" />
+ </array>
+
+</root>
+

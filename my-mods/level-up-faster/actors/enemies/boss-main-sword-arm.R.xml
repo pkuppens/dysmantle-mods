@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="name" value="enemies/boss main sword arm.R" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="SOLID,INDESTRUCTIBLE" />
+		<node id="physics_material" value="CONCRETE" />
+		<node id="mass" value="80" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="2.5" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="10" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="20" />
+		<node id="aggro_radius" value="128" />
+		<node id="friend_avoidance_radius" value="10" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="64" />
+		<node id="range" value="0" />
+		<node id="max_hit_points" value="100" />
+		<node id="damage_type" value="PIERCING" />
+		<node id="friend_group" value="OBSTACLES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+	</array>
+
+	<array id="AI_BEHAVIORS">
+		<node id="DysmantleProjectileWeapon"
+		 key.ACTOR_TYPE.ProjectileWeapon_projectile="actors/projectiles/boss-main-law-turret-projectile.xml"
+		 key.INTEGER.ProjectileWeapon_projectiles_per_shot="1"
+		 key.FLOAT.ProjectileWeapon_projectile_speed="300"
+		 key.FLOAT.ProjectileWeapon_projectile_speed_spread="0"
+		 key.FLOAT.ProjectileWeapon_projectile_damage_multiplier="1"
+		 key.FLOAT.ProjectileWeapon_projectile_accuracy_spread="0.01"
+		 key.FLOAT.ProjectileWeapon_projectile_spread="0"
+		 key.BOOLEAN.ProjectileWeapon_auto_shoot="false"
+		 key.FLOAT.ProjectileWeapon_auto_shoot_interval="1"
+		 key.STRING.ProjectileWeapon_bones="muzzle"
+		 key.BOOLEAN.ProjectileWeapon_ignore_z_direction="true"
+		 key.BOOLEAN.ProjectileWeapon_set_target_actor="true"
+		 key.INTEGER.ProjectileWeapon_clip_size="-1"
+		 key.FLOAT.ProjectileWeapon_max_distance_to_target="-1"
+		/>
+
+		<node id="DysmantleFlame" key.BOOLEAN.Flame_start_automatically="false" key.FLOAT.Flame_length="240" />
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="fire_arm_right" event_0_trigger_time="0" event_0_id="id0" event_0_command_word="fire_weapon" />
+		<node id="squat" animation_controller="Playback" skeleton_animation="models/animations/boss-main-law-arm.R-rig-squat.anim" />
+		<node id="flame"
+		 sound_scape="sound-scapes/cobra-statue-flame-loop.xml"
+		 wrap_mode="LOOP"
+		 forced_animation_length_in_seconds="0.50"
+		 event_0_trigger_time="0"
+		 event_0_id="id0"
+		 event_0_trigger_if_animation_is_fading_out="false"
+		 event_0_trigger_if_animation_blend_factor_is_zero="false"
+		 event_0_trigger_if_actor_is_dead="false"
+		 event_0_bone_id="muzzle"
+		 event_0_spawn_effect_to_local_particle_system="true"
+		 event_0_effect="effects/boss-flame.xml"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="ModelSkinned" />
+		<node id="bm_shadow" value="shadows/shadow-circle.png" />
+		<node id="shadow_scale" value="0.75" />
+		<node id="shadow_alpha" value="0.5" />
+		<node id="model" value="models/enemies/boss-main-sword-arm.R.model" />
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="BOX" />
+		<node id="size_x" value="86.5" />
+		<node id="size_y" value="33.0" />
+		<node id="size_z" value="56.3" />
+		<node id="offset_x" value="0.8" />
+		<node id="offset_y" value="7.2" />
+		<node id="offset_z" value="5.7" />
+	</array>
+</root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="MODS">
+		<node id="3445136810" enabled="true" />
+		<node id="3233338252" enabled="false" />
+		<node id="3239273544" enabled="true" />
+		<node id="3474748866" enabled="true" />
+		<node id="3236534412" enabled="true" />
+		<node id="3233326001" enabled="true" />
+		<node id="3775035006" enabled="true" />
+		<node id="3442809147" enabled="true" />
+		<node id="docs://DYSMANTLE Mods/level-up-faster" enabled="true" />
+		<node id="3233318320" enabled="false" />
+		<node id="3235601570" enabled="true" />
+	</array>
+</root>

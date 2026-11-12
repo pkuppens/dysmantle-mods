@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="version" value="1" />
+		<node id="name" value="tests/puke" />
+		<node id="tags" value="NO_EXPERIENCE_REWARD_ON_DEATH" />
+	</array>
+
+	<array id="ATTRIBUTES">
+		<node id="actor_flags" value="PERMANENT,DELETE_ACTOR_AFTER_DEATH,CAN_STAND_ON_ACTORS" />
+		<node id="physics_material" value="WATER" />
+		<node id="mass" value="80" />
+		<node id="gravity_multiplier" value="1" />
+		<node id="turn_speed" value="2.5" />
+		<node id="move_acceleration" value="200" />
+		<node id="max_move_speed" value="200" />
+		<node id="dampening_factor_on_ground" value="0" />
+		<node id="dampening_factor_on_air" value="0" />
+		<node id="restitution_coefficient" value="0.5" />
+		<node id="friction" value="0.2" />
+		<node id="minimum_damage_threshold" value="0" />
+		<node id="aggro_radius" value="500" />
+		<node id="friend_avoidance_radius" value="30" />
+		<node id="initial_scale" value="1" />
+		<node id="damage" value="3" />
+		<node id="range" value="100" />
+		<node id="max_hit_points" value="100" />
+		<node id="damage_type" value="POISON" />
+		<node id="friend_group" value="GRENADES" />
+		<node id="color" r="1" g="1" b="1" a="1" />
+	</array>
+
+	<array id="AI_PARAMETERS" ai="DysmantleBehavioral">
+	</array>
+
+	<array id="AI_BEHAVIORS">
+		<node id="DysmantleDamageDealer" key.FLOAT.DamageDealer_radius="-5" key.FLOAT.DamageDealer_time_alive="5" key.FLOAT.DamageDealer_time_alive_sd="0.5" key.BOOLEAN.DamageDealer_change_scale="true" />
+	</array>
+
+	<array id="ANIMATIONS">
+		<node id="effect"
+		 wrap_mode="LOOP"
+		 play_on_create="true"
+		 forced_animation_length_in_seconds="0.50"
+		 event_0_trigger_time="0"
+		 event_0_id="id0"
+		 event_0_effect="effects/puke-areal-puddle.xml"
+		 event_1_trigger_time="0.483"
+		 event_1_id="id1"
+		/>
+
+		<node id="death" category="DEATH" event_0_trigger_time="0" event_0_id="id0" event_0_effect="effects/puke-puddle-death.xml" />
+		<node id="hit-sfx"
+		 play_on_create="true"
+		 forced_animation_length_in_seconds="1.50"
+		 event_0_trigger_time="0"
+		 event_0_id="sfx"
+		 event_0_sound_event="{{FLOAT2,|Q|volume_range|Q|,|Q|0.8,0.8|Q|},{FLOAT2,|Q|frequency_range|Q|,|Q|0.9,1.1|Q|},{STRING,|Q|sounds|Q|,|Q|sfx/physics/acid-hit-concrete-01|SC|sfx/physics/acid-hit-concrete-02|SC|sfx/physics/acid-hit-concrete-03|Q|}}"
+		 event_1_trigger_time="0"
+		 event_1_id="id1"
+		 event_1_effect="effects/puke-puddle-impact.xml"
+		/>
+
+	</array>
+
+	<array id="RENDERER_PARAMETERS">
+		<node id="renderer" value="Model" />
+		<node id="shadow_scale" value="3.47" />
+		<node id="ground_decal_angle" value="148.65" />
+		<node id="ground_decal_scale" value="0.67" />
+		<node id="ground_decal_offset_x" value="2.02" />
+		<node id="ground_decal_offset_y" value="2.72" />
+		<node id="model" value="models/objects/puke-puddle.model" />
+	</array>
+
+	<array id="COLLIDER">
+		<node id="type" value="CYLINDER" />
+		<node id="radius_xy" value="30.0" />
+		<node id="min_z" value="-10.0" />
+		<node id="max_z" value="0.0" />
+	</array>
+</root>
