@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="required_program_id" value="DYSMANTLE" />
+		<node id="required_mod_api_version" value="1" />
+		<node id="mod_version" value="0.1.0" />
+		<node id="title" value="Mana Bead Drops" />
+		<node id="author" value="Me" />
+		<node id="description" value="Ordinary monsters sometimes drop a Mana Bead (about 20%, 50% for mana-infused). Includes the Level Up Faster monster stats; load after it." />
+		<node id="tags" value="LOOT,CHEAT" />
+		<node id="load_priority" value="1" />
+	</array>
+
+</root>

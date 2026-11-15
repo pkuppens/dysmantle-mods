@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="required_program_id" value="DYSMANTLE" />
+		<node id="required_mod_api_version" value="1" />
+		<node id="mod_version" value="0.1.0" />
+		<node id="title" value="Campfire Fast Travel" />
+		<node id="author" value="Me" />
+		<node id="description" value="Fast travel between campfires without needing DLC1. Also: Storage Box Upgrade costs scrap metal instead of mana beads. Rest at a campfire and use Fast Travel." />
+		<node id="tags" value="FAST_TRAVEL,CHEAT" />
+		<node id="load_priority" value="0" />
+	</array>
+
+</root>
