@@ -20,6 +20,7 @@ MOD = "campfire-fast-travel"
 # The campfire's "rest" interaction runs this before the camp menu opens. Escaped like the rest of the XML.
 FLAG_LINES = (
     "&#9;if (!Game_IsRecipeCrafted(&#34;COMPASS&#34;)) Game_CraftRecipe(&#34;COMPASS&#34;);&#10;"
+    "&#9;if (!Game_IsRecipeCrafted(&#34;TRANSMITTER_CAMP_FAST_TRAVEL&#34;)) Game_CraftRecipe(&#34;TRANSMITTER_CAMP_FAST_TRAVEL&#34;);&#10;"
     "&#9;Game_SetFeatureAvailable(&#34;CAMPFIRE_FAST_TRAVEL&#34;, true);&#10;"
     "&#9;KeyValueStore_SetKeyValueBoolean(Stage_GetKeyValueStore(), &#34;always_allow_campfire_fast_travel&#34;, true);&#10;"
 )
