@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<!-- NOTES:
+
+	Attributes:
+	
+	 refines_to_material: defines into which material this material transforms into.
+	 refine_duration_in_seconds: defines how long it takes to create the refined material.
+	 refine_consume_amount: defines how many materials are consumed to create one refines_to_material material.
+	 fuel_duration_in_seconds: if defined and != 0, this material can be used as a fuel source for a refiner. Value -1 means infinite fuel time.
+	 
+	 Tags:
+	 EDIBLE: shows up in cooking menu
+	 RELIABLE: is assumed to be found all over the place. Safe to use for wishing well requests if no other material has been found.
+
+-->
+
+    <array id="MATERIAL_TYPES">
+	<!--COMMON MATERIALS-->
+        <node id="PLANTS"
+		 rarity="COMMON" tags="RELIABLE"
+         display_name="Plant Matter"
+         description="Organic materials harvested from plantlife."
+         bm_icon="dysmantle/materials/icon-plants.png" 
+		 fuel_duration_in_seconds="10" />
+		 
+        <node id="SCRAP_FABRIC"
+		 rarity="COMMON" tags="RELIABLE"
+         display_name="Scrap Fabric"
+         description="Torn down and shredded bits of textile."
+         bm_icon="dysmantle/materials/icon-scrap-fabric.png"
+		 refines_to_material="FABRIC"
+		 refine_duration_in_seconds="4"
+		 refine_consume_amount="10"
+         fuel_duration_in_seconds="40"/>            
+		 
+        <node id="SCRAP_WOOD"
+		 rarity="COMMON" tags="RELIABLE"
+         display_name="Scrap Wood"
+         description="Bits and pieces of low quality wood found in nature and some furniture."
+         bm_icon="dysmantle/materials/icon-scrap-wood.png" 
+		 refines_to_material="WOOD"
+		 refine_duration_in_seconds="4"
+		 refine_consume_amount="10"
+		 fuel_duration_in_seconds="30" />
+		 
+		 <node id="SCRAP_METAL"
+		 rarity="COMMON" tags="RELIABLE"
+         display_name="Scrap Metal"
+         description="Bits and pieces of metal from worn down and broken objects."
+         bm_icon="dysmantle/materials/icon-scrap-metal.png"
+ 		 refines_to_material="IRON"
+		 refine_duration_in_seconds="5"
+		 refine_consume_amount="9" />
+		 
+		 <node id="PLASTICS"
+		 rarity="COMMON" tags="RELIABLE"
+         display_name="Plastics"
+         description="A synthetic or organic compound that can be molded into a variety of forms."
+         bm_icon="dysmantle/materials/icon-plastics.png" />
+		 
+		 <node id="STONE"
+		 rarity="COMMON"
+         display_name="Stone"
+         description="A common denominator for all sorts of solid or aggregates of minerals."
+         bm_icon="dysmantle/materials/icon-stone.png" />
+		 
+	
+	<!--UNCOMMON MATERIALS-->
+		 
+        <node id="WOOD"
+		 rarity="UNCOMMON" tags="RELIABLE"
+         display_name="Wood"
+         description="Hardy and strong organic material that is in better condition than scrap wood."
+         bm_icon="dysmantle/materials/icon-wood.png" 
+		 refines_to_material="LUMBER"
+		 refine_duration_in_seconds="8"
+		 refine_consume_amount="5"
+		 fuel_duration_in_seconds="80" />
+		 
+        <node id="IRON"
+		 rarity="UNCOMMON"
+         display_name="Iron"
+         description="A common form of metal used almost universally."
+         bm_icon="dysmantle/materials/icon-metal.png"
+		 refines_to_material="STEEL"
+		 refine_duration_in_seconds="10"
+		 refine_consume_amount="6"/>
+		 
+		 <node id="SCRAP_ELECTRONICS"
+		 rarity="UNCOMMON"
+		 display_name="Scrap Electronics"
+         description="Damaged innards of electronic devices of all sorts."
+         bm_icon="dysmantle/materials/icon-scrap-electronics.png"
+		 refines_to_material="ELECTRONICS"
+		 refine_duration_in_seconds="4"
+		 refine_consume_amount="10"/>
+		 
+		 <node id="CERAMICS"
+		 rarity="UNCOMMON" tags="RELIABLE"
+         display_name="Ceramics"
+         description="Materials made by firing up nonmetallic minerals. Most often found in bathrooms."
+         bm_icon="dysmantle/materials/icon-ceramics.png" />
+		 
+         <node id="FABRIC"
+		 rarity="UNCOMMON"
+         display_name="Fabric"
+         description="A flexible material made by interwoven fibers of natural or artificial origin."
+         bm_icon="dysmantle/materials/icon-fabric.png" 
+         fuel_duration_in_seconds="10"/>
+		 
+		 <node id="HIDE"
+		 rarity="UNCOMMON"
+         display_name="Hide"
+         description="Leathery skin of an animal that can be used as a basis for clothing."
+         bm_icon="dysmantle/materials/icon-hide.png"
+		 refine_duration_in_seconds="4"
+		 refine_consume_amount="10"/> 
+		 
+		<node id="BRICKS"
+		 rarity="UNCOMMON"
+         display_name="Bricks"
+         description="A relatively common building material traditionally made of dried clay."
+         bm_icon="dysmantle/materials/icon-bricks.png"
+		 refines_to_material="CERAMICS"
+		 refine_duration_in_seconds="4"
+		 refine_consume_amount="10"/>
+        
+	<!--RARE MATERIALS-->
+	
+		<node id="RUBBER"
+		 rarity="RARE"
+         display_name="Rubber"
+         description="A rare synthetic material with a wide range of uses."
+         bm_icon="dysmantle/materials/icon-rubber.png" />
+		 
+        <node id="STEEL"
+		 rarity="RARE"
+         display_name="Steel"
+         description="Highly refined alloy of iron and coal that is very strong."
+         bm_icon="dysmantle/materials/icon-steel.png" 
+		 refines_to_material="TITANIUM"
+		 refine_duration_in_seconds="15"
+		 refine_consume_amount="3" />
+        
+		<node id="LUMBER"
+		 rarity="RARE"
+         display_name="Lumber"
+         description="Wood that has been processed into beams and planks."
+         bm_icon="dysmantle/materials/icon-lumber.png"
+		 fuel_duration_in_seconds="300"/>
+        
+        <node id="ELECTRONICS"
+		 rarity="RARE"
+		 display_name="Electronics"
+         description="A rare material found in high tech equipment of the past."
+         bm_icon="dysmantle/materials/icon-electronics.png" />
+		 
+		 <node id="MANA_BEAD"
+		 rarity="RARE" tags="UNDROPPABLE,MANA"
+         display_name="Mana Bead"
+         description="Raw unprocessed bead of Mana brimming with power."
+         bm_icon="dysmantle/materials/icon-mana-bead.png" 
+		 effect="effects/material-mana-bead.xml" 
+		 effect_spawn_interval="0.75"
+		 refines_to_material="MANA_CHUNK"
+		 refine_duration_in_seconds="90"
+		 refine_consume_amount="75"
+		 fuel_duration_in_seconds="120" />
+		 
+<!--EPIC MATERIALS-->
+		<node id="TITANIUM"
+		 rarity="EPIC"
+         display_name="Titanium"
+         description="Advanced and extremely formidable metal alloy."
+         bm_icon="dysmantle/materials/icon-titanium.png" />
+		 		 
+         <node id="MANA_CHUNK"
+		 rarity="EPIC" tags="UNDROPPABLE,MANA"
+         display_name="Mana Chunk"
+         description="Chunk of melted Mana brimming with power."
+         bm_icon="dysmantle/materials/icon-mana-chunk.png" 
+		 effect="effects/material-mana-chunk.xml" 
+		 effect_spawn_interval="0.75"
+		 fuel_duration_in_seconds="-1" />
+		 
+         <node id="MANA_SHARD"
+		 rarity="EPIC" tags="UNDROPPABLE,MANA"
+         display_name="Mana Shard"
+         description="Shard of pure Mana brimming with power."
+         bm_icon="dysmantle/materials/icon-mana-shard.png" 
+		 effect="effects/material-mana-shard.xml" 
+		 effect_spawn_interval="0.75"
+		 fuel_duration_in_seconds="-1" />
+		 
+<!--LEGENDARY MATERIALS-->
+         <node id="TOMB_ORB"
+		 rarity="LEGENDARY" tags="UNDROPPABLE,MANA"
+         display_name="Blue Eye Orb"
+         description="Peculiar round and smooth container brimming with power."
+         bm_icon="dysmantle/materials/icon-tomb-orb.png" 
+		 effect="effects/material-tomb-orb.xml" 
+		 effect_spawn_interval="0.75"
+		 fuel_duration_in_seconds="-1" />
+		 
+         <node id="NIGHT_MANA"
+		 rarity="LEGENDARY" tags="UNDROPPABLE,MANA"
+         display_name="Night Mana"
+         description="Shadegrown mana substance."
+         bm_icon="dysmantle/materials/icon-night-mana.png" 
+		 effect="effects/material-tomb-orb.xml" 
+		 effect_spawn_interval="0.75"
+		 fuel_duration_in_seconds="-1" />
+
+		<node id="CPU"
+		 rarity="LEGENDARY" tags="UNDROPPABLE"
+		 display_name="Central Processing Unit"
+         description="An extremely rare material used to give instructions to electronic interfaces."
+         bm_icon="dysmantle/materials/icon-central-processing-unit.png" />
+
+         <node id="FUEL_CELL"
+		 rarity="LEGENDARY" tags="UNSTORABLE,UNDROPPABLE,MANA,HIDE_IN_COLLECTION"
+         display_name="Fuel Cell"
+         description="High capacity fuel cell."
+         bm_icon="dysmantle/materials/icon-fuel-cell.png"
+		 fuel_duration_in_seconds="-1" />
+		 		 
+		 <!-- Food materials start here, ordered by type and rarity -->
+		 <!-- GATHERABLES: MUSHROOMS -->
+         <node id="MUSHROOM_BROWN"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Brown Mushroom"
+         description="Edible mushroom found in temperate climates."
+         bm_icon="dysmantle/materials/icon-mushroom-brown.png" />		
+		 
+         <node id="MUSHROOM_RED"
+		 rarity="UNCOMMON" tags="EDIBLE"
+         display_name="Red Mushroom"
+         description="Edible mushroom found in damp places."
+         bm_icon="dysmantle/materials/icon-mushroom-red.png" />		 
+		 
+         <node id="MUSHROOM_WHITE"
+		 rarity="RARE" tags="EDIBLE"
+         display_name="White Mushroom"
+         description="Rare edible mushroom that grows in cold climates."
+         bm_icon="dysmantle/materials/icon-mushroom-white.png" />
+		<!--GATHERABLES: OTHER-->
+		<node id="RICE"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Rice"
+         description="Seeds of a certain type of grass that are usually boiled before ingestion. It can't be grown on the island, so it had great import value."
+         bm_icon="dysmantle/materials/icon-rice.png" />
+		
+		 <node id="BERRIES"
+		 rarity="UNCOMMON" tags="EDIBLE"
+         display_name="Berries"
+         description="A variety of small edible fruits that grow around in nature."
+         bm_icon="dysmantle/materials/icon-berries.png" />	
+
+		<node id="EGG"
+		 rarity="UNCOMMON" tags="EDIBLE,NON_VEGAN"
+         display_name="Egg"
+         description="A good source of protein. Laid by a variety of different species, such as birds and reptiles. "
+         bm_icon="dysmantle/materials/icon-egg.png" />
+		 
+		<node id="CACTUS"
+		 rarity="UNCOMMON" tags="EDIBLE"
+         display_name="Cactus"
+         description="An exotic plant substance found mostly in deserts."
+         bm_icon="dysmantle/materials/icon-cactus.png" />
+		 
+		<node id="SPICES"
+		 rarity="RARE" tags="EDIBLE"
+         display_name="Spices"
+         description="A collection of different leaves, seeds, fruits and other plant substances added as flavoring to a food."
+         bm_icon="dysmantle/materials/icon-spices.png" />			 
+		
+		<!--FISHING/HUNTING: FISH-->
+         <node id="FISH_A"
+		 rarity="COMMON" tags="EDIBLE,FISH,NON_VEGAN"
+         display_name="Common Roach"
+         description="An ordinary fish living everywhere. A true survivor."
+         bm_icon="dysmantle/materials/icon-fish-a.png"
+		 refine_duration_in_seconds="1.5" />
+		 		 
+         <node id="FISH_B"
+		 rarity="UNCOMMON" tags="EDIBLE,FISH,NON_VEGAN"
+         display_name="Red Herring"
+         description="Hard to find and distracting fish of mystery."
+         bm_icon="dysmantle/materials/icon-fish-b.png"
+		 refine_duration_in_seconds="1" />
+		 		 
+         <node id="FISH_C"
+		 rarity="RARE" tags="EDIBLE,FISH,NON_VEGAN"
+         display_name="Superior Salmon"
+         description="A prized and delicious species."
+         bm_icon="dysmantle/materials/icon-fish-c.png"
+		 refine_duration_in_seconds="0.5" />
+
+		<node id="FISH_E"
+		 rarity="RARE" tags="EDIBLE,FISH,NON_VEGAN"
+         display_name="Zany Zander"
+         description="A popular game fish."
+         bm_icon="dysmantle/materials/icon-fish-e.png" />
+		 
+		 <node id="FISH_D"
+		 rarity="LEGENDARY" tags="EDIBLE,FISH,NON_VEGAN"
+         display_name="Namazu"
+         description="A mythological giant catfish."
+         bm_icon="dysmantle/materials/icon-fish-d.png" />
+		 
+		<!--FISHING/HUNTING: HUNTING-->
+		 <node id="MEAT"
+		 rarity="UNCOMMON" tags="EDIBLE,NON_VEGAN"
+         display_name="Meat"
+         description="Organic matter from non-corrupted animals. Very rare in the current situation."
+         bm_icon="dysmantle/materials/icon-meat.png" />
+
+		<node id="BONE"
+		 rarity="RARE" tags="NON_VEGAN"
+         display_name="Bone"
+         description="A hard tissue found mostly inside animals."
+         bm_icon="dysmantle/materials/icon-bone.png" />
+		 
+		 
+		<!--CROPS-->
+         <node id="TOMATO"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Tomato"
+         description="Red and juicy fruit that grows in bushes."
+         bm_icon="dysmantle/materials/icon-tomato.png" />
+         	
+         <node id="CARROT"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Carrot"
+         description="A vegetable that grows its fruit under the ground and green leaves above ground."
+         bm_icon="dysmantle/materials/icon-carrot.png" />	
+		 
+		<node id="CORN"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Corn"
+         description="A tall plant that produces edible kernels from its leafy stalk."
+         bm_icon="dysmantle/materials/icon-corn.png" />	
+		 
+		<node id="LETTUCE"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Lettuce"
+         description="A green plant that produces big edible leaves that are usable either raw or cooked."
+         bm_icon="dysmantle/materials/icon-lettuce.png" />
+
+		<node id="ONION"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Onion"
+         description="An underground vegetable that produces edible bulbs. Quite pungent if consumed raw."
+         bm_icon="dysmantle/materials/icon-onion.png" />
+		 
+		<node id="POTATO"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Potato"
+         description="A root vegetable that produces edible tubers. Other parts of the plant are sadly toxic."
+         bm_icon="dysmantle/materials/icon-potato.png" />
+
+		<node id="WHEAT"
+		 rarity="COMMON" tags="EDIBLE"
+         display_name="Wheat"
+         description="A grass that produces grains when cultivated. These grains can be ground into flour."
+         bm_icon="dysmantle/materials/icon-wheat.png" />
+		 
+		 <!-- DLC MATERIALS START HERE -->
+		<!--DLC1-->
+        <node id="LOBSTER"
+		 rarity="RARE" tags="EDIBLE,FISH,NON_VEGAN" requires_iap="DLC1"
+         display_name="Lobster"
+         description="A clawed crustacean living in the water. Highly prized as seafood as the hardened shell conceals delicious meat."
+         bm_icon="dysmantle/materials/icon-lobster-a.png" />
+		 
+		<!--DLC2-->
+		 <node id="OCTOPUS"
+		 rarity="UNCOMMON" tags="EDIBLE,FISH,NON_VEGAN" requires_iap="DLC2"
+         display_name="Octopus"
+         description="A multi-limbed mollusc that is considered a delicacy in multiple parts of the world."
+         bm_icon="dysmantle/materials/icon-octopus.png" />
+		
+		<!--DLC2 GATHERABLES-->
+        <node id="BANANA"
+		 rarity="UNCOMMON" tags="EDIBLE" requires_iap="DLC2"
+         display_name="Banana"
+         description="An elongated fruit with a distinct shape used in a variety of cooking recipes. Found in warm areas."
+         bm_icon="dysmantle/materials/icon-banana.png" />
+
+        <node id="TRUFFLE"
+		 rarity="RARE" tags="EDIBLE" requires_iap="DLC2"
+         display_name="Truffle"
+         description="An edible subterranean fungus that is highly prized as food in multiple national haute cuisines."
+         bm_icon="dysmantle/materials/icon-truffle.png" />
+
+        <node id="CLOUDBERRY"
+		 rarity="RARE" tags="EDIBLE" requires_iap="DLC2"
+         display_name="Cloudberry"
+         description="A peculiar amber colored berry found in the wild in cool temperate regions."
+         bm_icon="dysmantle/materials/icon-cloudberries.png" />
+
+        <node id="TIGER_LILY"
+		 rarity="RARE" tags="FLOWER" requires_iap="DLC2"
+         display_name="Tiger Lily"
+         description="Large, brightly colored flowers with distinctive dark spots on their petals. Typically found in [RED]hot[WHITE] climates."
+         bm_icon="dysmantle/materials/icon-tiger-lily.png" />
+
+        <node id="AMBER_LILY"
+		 rarity="RARE" tags="FLOWER" requires_iap="DLC2"
+         display_name="Amber Lily"
+         description="An exquisite yellow flower that is typically found in [YELLOW]temperate[WHITE] climates."
+         bm_icon="dysmantle/materials/icon-heliconia.png" />
+		 
+        <node id="FROST_LILY"
+		 rarity="RARE" tags="FLOWER" requires_iap="DLC2"
+         display_name="Frost Lily"
+         description="An ice cold flower that is typically found in [BLUE]cold[WHITE] climates."
+         bm_icon="dysmantle/materials/icon-lili.png" />
+		
+		<!-- DLC2 MATERIALS-->
+		 <node id="CHITIN"
+		 rarity="UNCOMMON" requires_iap="DLC2"
+         display_name="Chitin"
+         description="The mutated nature of insects found in the hidden archipelago also effects their exoskeletons. This 'chitin' is more akin to kevlar than simple polysaccharide."
+         bm_icon="dysmantle/materials/icon-chitin.png" />
+
+         <node id="GOLD_ORE"
+		 rarity="UNCOMMON" requires_iap="DLC2"
+         display_name="Gold Ore"
+         description="A malleable, bright metal that has been considered valuable throughout recorded history."
+         bm_icon="dysmantle/materials/icon-gold-ore.png" 
+         refines_to_material="GOLD_BAR"
+		 refine_duration_in_seconds="10"
+		 refine_consume_amount="4"
+         />   
+
+         <node id="GOLD_BAR"
+		 rarity="RARE" requires_iap="DLC2"
+         display_name="Gold Bar"
+         description="Refined gold ore that can easily be utilised in things ranging from electronics to jewelry."
+         bm_icon="dysmantle/materials/icon-gold.png" />
+
+         <node id="BEAM_GUN_BATTERY"
+		 rarity="LEGENDARY" requires_iap="DLC2" tags="UNDROPPABLE,MANA"
+         display_name="Beam Gun Battery"
+         description="Provides additional power to the Beam Gun."
+         bm_icon="dysmantle/materials/icon-beam-gun-battery.png"
+		 fuel_duration_in_seconds="-1" />
+		 
+
+    </array>
+</root>

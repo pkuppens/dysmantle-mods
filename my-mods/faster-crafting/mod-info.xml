@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="required_program_id" value="DYSMANTLE" />
+		<node id="required_mod_api_version" value="1" />
+		<node id="mod_version" value="0.1.0" />
+		<node id="title" value="Faster Crafting" />
+		<node id="author" value="Me" />
+		<node id="description" value="Sawmill, smelter and other refiners work 10x faster (fuel use drops with it)." />
+		<node id="tags" value="CRAFTING,CHEAT" />
+		<node id="load_priority" value="0" />
+	</array>
+
+</root>
