@@ -7,7 +7,7 @@
 		<node id="mod_version" value="0.1.0" />
 		<node id="title" value="Faster Farming" />
 		<node id="author" value="Me" />
-		<node id="description" value="Crops grow 60x faster (1h10 becomes 1m10)." />
+		<node id="description" value="Crops grow 20x faster (70 min becomes 3.5 min)." />
 		<node id="tags" value="FARMING,CHEAT" />
 		<node id="load_priority" value="0" />
 	</array>

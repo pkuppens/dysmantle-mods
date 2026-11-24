@@ -12,7 +12,6 @@ SRC = ROOT / "unpacked" / "data-windows" / "dysmantle"
 MODS = ROOT / "my-mods"
 
 CRAFT_FACTOR = 0.1  # refine durations at 10%
-FARM_FACTOR = 1 / 60  # 1h10 -> 1m10
 
 
 def fmt(value: float) -> str:
@@ -61,13 +60,15 @@ def main() -> None:
     )
     print(f"faster-crafting: {n} refine durations scaled")
 
+    # grow_time_minutes is world time (20x real time). Real minutes N -> N/20 real minutes == N world minutes,
+    # so keep the original number as an integer and switch attribute. The game rejected decimals.
     seeds = (SRC / "seeds.xml").read_bytes().decode("utf-8")
-    seeds, m = scale_attr(seeds, "grow_time_minutes_real_time", FARM_FACTOR)
+    seeds, m = re.subn(r'grow_time_minutes_real_time(\s*=\s*")(\d+)"', r'grow_time_minutes"', seeds)
     write_mod(
         "faster-farming", "dysmantle/seeds.xml", seeds,
-        mod_info("Faster Farming", "Crops grow 60x faster (1h10 becomes 1m10).", "FARMING,CHEAT"),
+        mod_info("Faster Farming", "Crops grow 20x faster (70 min becomes 3.5 min).", "FARMING,CHEAT"),
     )
-    print(f"faster-farming: {m} grow times scaled")
+    print(f"faster-farming: {m} grow times converted")
 
 
 if __name__ == "__main__":

@@ -19,7 +19,7 @@ icon icon for the seed
 		 material_id="CARROT"
 		 display_name="Carrot Seed"
 		 description="These seeds produce a vegetable with an edible taproot."
-		 grow_time_minutes_real_time="0.3333"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="1"
 		 num_materials_one_plant_drops="2..3"
 		 actor_type="actors/interactives/farming-carrot.xml" />
@@ -28,7 +28,7 @@ icon icon for the seed
 		 material_id="TOMATO"
 		 display_name="Tomato Seed"
 		 description="These seeds grow into bushy plants with big edible berries."
-		 grow_time_minutes_real_time="0.4167"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="1"
 		 num_materials_one_plant_drops="3..4"
 		 actor_type="actors/interactives/farming-tomato.xml" />
@@ -37,7 +37,7 @@ icon icon for the seed
 		 material_id="LETTUCE"
 		 display_name="Lettuce Seed"
 		 description="When these vegetable seeds are planted, they eventually grow bushy leaves overground. "
-		 grow_time_minutes_real_time="0.5833"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="2"
 		 num_materials_one_plant_drops="3..4"
 		 actor_type="actors/interactives/farming-lettuce.xml" />
@@ -46,7 +46,7 @@ icon icon for the seed
 		 material_id="POTATO"
 		 display_name="Potato Seed"
 		 description="These seeds produce an edible 'tuber' underground, the location of which is marked by green leaves overground."
-		 grow_time_minutes_real_time="0.6667"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="2"
 		 num_materials_one_plant_drops="3..5"
 		 actor_type="actors/interactives/farming-potato.xml" />	
@@ -55,7 +55,7 @@ icon icon for the seed
 		material_id="CORN"
 		display_name="Corn Kernel"
 		description="A leafy stalk is produced from these kernels. At the top of the stalk there is a concentration of more kernels called 'an ear'."
-		grow_time_minutes_real_time="0.8333"
+		grow_time_minutes"
 		num_materials_required_for_one_plant_seed="2"
 		num_materials_one_plant_drops="4..6"
 		actor_type="actors/interactives/farming-corn.xml" />
@@ -64,7 +64,7 @@ icon icon for the seed
 		 material_id="ONION"
 		 display_name="Onion Seed"
 		 description="After planting these seeds, a stem grows out underground and eventually begins to swell into a round edible 'bulb'."
-		 grow_time_minutes_real_time="1"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="3"
 		 num_materials_one_plant_drops="5..7"
 		 actor_type="actors/interactives/farming-onion.xml" />		 
@@ -73,7 +73,7 @@ icon icon for the seed
 		 material_id="WHEAT"
 		 display_name="Wheat Seed"
 		 description="These seeds produce a type of grass with harvestable crops at the end of a long stalk."
-		 grow_time_minutes_real_time="1.1667"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="3"
 		 num_materials_one_plant_drops="5..8"
 		 actor_type="actors/interactives/farming-wheat.xml" />		
@@ -82,7 +82,7 @@ icon icon for the seed
 		 material_id="BANANA"
 		 display_name="Banana Seed"
 		 description="These seeds grow into plants with big yellow fruits."
-		 grow_time_minutes_real_time="1.1667"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="3"
 		 num_materials_one_plant_drops="4..7"
 		 actor_type="actors/interactives/farming-banana-plant.xml" />
@@ -92,7 +92,7 @@ icon icon for the seed
 		 requires_item="items/tools/seed-bag-mana.nut"
 		 display_name="Mana Seed"
 		 description="Mana seeds that grow into a strange plant with harvestable crops."
-		 grow_time_minutes_real_time="2"
+		 grow_time_minutes"
 		 num_materials_required_for_one_plant_seed="1"
 		 num_materials_one_plant_drops="4..6"
 		 actor_type="actors/interactives/farming-mana-bead.xml" />
