@@ -63,7 +63,7 @@ def main() -> None:
     # grow_time_minutes is world time (20x real time). Real minutes N -> N/20 real minutes == N world minutes,
     # so keep the original number as an integer and switch attribute. The game rejected decimals.
     seeds = (SRC / "seeds.xml").read_bytes().decode("utf-8")
-    seeds, m = re.subn(r'grow_time_minutes_real_time(\s*=\s*")(\d+)"', r'grow_time_minutes"', seeds)
+    seeds, m = re.subn(r'grow_time_minutes_real_time(\s*=\s*")(\d+)"', lambda g: "grow_time_minutes" + g.group(1) + g.group(2) + '"', seeds)
     write_mod(
         "faster-farming", "dysmantle/seeds.xml", seeds,
         mod_info("Faster Farming", "Crops grow 20x faster (70 min becomes 3.5 min).", "FARMING,CHEAT"),
