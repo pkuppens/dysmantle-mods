@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<root>
+
+	<array id="INFO">
+		<node id="required_program_id" value="DYSMANTLE" />
+		<node id="required_mod_api_version" value="1" />
+		<node id="mod_version" value="0.2.0" />
+		<node id="title" value="Campfire Network" />
+		<node id="author" value="Me" />
+		<node id="description" value="Campfire fast travel on the main island without the Underworld DLC quest. Light or rest at a campfire to unlock it. Cheap transmitter and Smoke Signal. Replaces Campfire Fast Travel (my version); do not enable both. Storage Box Upgrade costs scrap metal." />
+		<node id="tags" value="FAST_TRAVEL,CHEAT" />
+		<node id="load_priority" value="200" />
+	</array>
+
+</root>

@@ -23,3 +23,5 @@
 3. If the vanilla route works but the flag patch does not, drop the flag patch and keep the recipe un-gating.
 4. If the vanilla route also fails, the engine itself checks DLC1 for the feature. Then try setting the feature from a place that runs on stage load (`GetMonsterHitPointsMultiplier` in `game-settings.nut`, shared with level-up-faster) and read engine strings in `prog.dll` near `FastTravel` for more conditions.
 5. Check Workshop mod conflicts (IDs in `docs/active-mods.reference.xml`).
+
+**Update 2026-11-26:** root causes found. (1) `active-mods.xml` did not list campfire-fast-travel (or mana-bead-drops) at all: deployed but never enabled. (2) Vanilla sets `CAMPFIRE_FAST_TRAVEL` only in the DLC1 cave-entrance trigger (`Game_IsQuestCompleted(dlc_1_main)`), and `quests/dlc_1_main.nut` forces it to false on non-DLC stages while that quest is active. (3) Workshop mod 3233338252 (same title, DarthNemesis) needs Underworld ownership and only patches the trigger. Fix: new mod `campfire-network` (see README); test, then delete campfire-fast-travel.
