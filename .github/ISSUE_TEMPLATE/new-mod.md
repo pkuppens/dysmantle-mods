@@ -16,6 +16,7 @@ HOW TO USE (humans and agents)
 -->
 
 ## Goal
+<!-- This Goal ends up in the public description (`description` in mod-info.xml, Workshop page). Write it for players: plain, no internal jargon, no personal data. -->
 [One sentence: what the player gets and why.]
 
 ## Decisions
@@ -36,8 +37,13 @@ HOW TO USE (humans and agents)
 | Title (`title`) | [Title Case Name] |
 | Description (`description`) | [one or two sentences, shown in the game] |
 | Tags (`tags`) | [e.g. CHEAT, FARMING, LEVEL, FAST_TRAVEL] |
-| Version (`mod_version`) | 0.1.0 |
+| Version (`mod_version`) | [0.0.1 first alpha; see versioning below] |
 | Load priority (`load_priority`) | [0 default; higher loads later and wins on overlap] |
+
+### Versioning (`mod_version`, semantic versioning x.y.z)
+<!-- 0.0.z = very alpha (untested or experimental); 0.y.z = beta (works, may still change); x.y.z with x>=1 = released in public (Workshop).
+Within a release: z = fix/patch, y = minor internal change, x = interface-breaking change (see the update template). -->
+- Target stage for this issue: [ ] alpha 0.0.z  [ ] beta 0.y.z  [ ] release 1.0.0 (public)
 
 ### Behaviour
 [What exactly changes: numbers, before -> after. Example: crop grow time divided by 20 (70 min -> 3.5 min).]

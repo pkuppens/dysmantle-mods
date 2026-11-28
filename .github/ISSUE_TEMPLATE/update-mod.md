@@ -28,7 +28,12 @@ HOW TO USE (humans and agents)
 
 ## Decisions
 <!-- Each box triggers extra steps in "Workflow steps" below. -->
-- [ ] **Version bump** to [x.y.z] (patch = fix, minor = new behaviour; update `description` if behaviour changed)
+- [ ] **Version bump** from [current] to [x.y.z]. Semantic versioning, `mod_version` in `mod-info.xml`:
+  - `z`: fix/patch, no behaviour change beyond the fix
+  - `y`: minor internal change (tuning values, small additions that keep saves and dependants working)
+  - `x`: interface-breaking change: a changed file/path set that others depend on, removed or renamed items/recipes/flags, changed load priority or dependency, anything that can break saves or mods built on this one. Needs a change note, and dependants must be checked
+  - `0.0.z` very alpha, `0.y.z` beta, `x>=1` released in public. Moving 0.y.z -> 1.0.0 = first public release
+  - Update `description` if the Goal/behaviour changed (it is public text)
 - [ ] **Public (Workshop item)** after this change: leave unticked to stay or become private / local only
 - [ ] **Add or replace preview icon** (`preview.jpg`)
 - [ ] **Regenerate from unpacked game data** (re-unpack first if the game was updated)
