@@ -38,6 +38,10 @@ The developers say there is no documentation ("use at your own risk"). The offic
    - Only mods that contain a `mod-info.xml` are deployed. `easy-mode-draft` has none, so the script skips it (see "Steps to try the draft mod").
 6. Launch option in Steam: `--features MODS`.
 
+## Contributing: issues
+
+New issue > **Create new mod** or **Update existing mod** (`.github/ISSUE_TEMPLATE/`). The templates carry the decisions (public Workshop vs private, preview icon, generator), conflict check, install/test steps and acceptance criteria.
+
 ## Saves
 
 Saves live in `%APPDATA%\10tons\DYSMANTLE\`. Steam Cloud also syncs them, but a cloud conflict can overwrite local progress, so keep a manual snapshot.
